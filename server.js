@@ -9,12 +9,12 @@ var port = process.env.PORT || 8080;
 
 
 app.get('/', function(req, res) {
-    // static html page goes here
+    res.sendFile(__dirname + '/index.html');
 });
 
 
 
-app.post('/filesize', function(req, res) {
+app.post('/filesize', upload.single('file'), function(req, res) {
     var name = req.file.originalname;
     var size = req.file.size;
     res.json(

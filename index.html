@@ -1,8 +1,10 @@
-<body>
-  <h2>Submit a file to view its filesize</h2>
-  <p>Response is in form { name: filename, size: filesize }</p>
-  <form action='/filesize' method='post' enctype='mulipart/form-data'>
-    <input type='file' name='file'>
-    <input type='submit'>
-  </form>
-</body>
+<html>
+  <body>
+    <h2>Submit a file to view its filesize</h2>
+    <p>Response is in form { name: filename, size: filesize }</p>
+    <form action='/filesize' method='post' enctype='multipart/form-data'>
+      <input type='file' name='file'>
+      <input type='submit'>
+    </form>
+  </body>
+</html>
